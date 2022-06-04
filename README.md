@@ -1,3 +1,31 @@
+Hi there. You can see my learning projects. 
+
+I use Page Object pattern, so in main/java directory you can see pages and constants, in test derictory you can see tests and resources. 
+
+# Structure
+
+main
+
+java
+- constants
+  - AppleinsiderConstants
+- pages
+  - appleinsider
+    - AppleinsiderMainPage
+    - AppleinsiderSearchPage
+
+test
+
+java
+- appleinsider
+  - AppleinsiderTest
+- base
+  - BaseTest
+  - 
+resourses
+- allure.properties
+      
+      
 # AppleinsiderUITest 
 UI tests for https://appleinsider.ru/ with Selenide.
 
