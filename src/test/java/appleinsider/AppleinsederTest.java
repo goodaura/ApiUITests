@@ -4,7 +4,7 @@ import base.BaseTest;
 import org.junit.Assert;
 import org.junit.Test;
 import pages.appleinsider.AppleinsiderMainPage;
-import static constants.AppleinsiderUrl.*;
+import static constants.AppleinsiderConstants.*;
 
 
 public class AppleinsederTest extends BaseTest {
