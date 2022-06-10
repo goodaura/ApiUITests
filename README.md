@@ -16,7 +16,7 @@ Tests:
 UI tests for https://demoqa.com/ with Selenide.
 
 Tests: 
--
--
+- Finding book "Pocket Guide Book" and checking fields "ISBN", "Title", "Sub title", "Total pages" on book page;
+- Check error message after try to register without reCapture.
 
 
