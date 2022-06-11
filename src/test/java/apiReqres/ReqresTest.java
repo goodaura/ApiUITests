@@ -50,4 +50,44 @@ public class ReqresTest {
             Assertions.assertTrue(realPeopleAvatars.get(i).contains(realPeopleIds.get(i)));
         }
     }
+
+    /**
+     *
+     * Successful registration in https://reqres.in/
+     */
+    @Test
+    public void successRegTest(){
+        Specifications.installSpecification(Specifications.requestSpec(URL), Specifications.responseSpecOK200());
+        Integer id = 4;
+        String token = "QpwL5tke4Pnpja7X4";
+        Register user = new Register("eve.holt@reqres.in", "pistol");
+        SuccessRegistration successRegistration = given()
+                .body(user)
+                .when()
+                .post("api/register")
+                .then().log().all()
+                .extract().as(SuccessRegistration.class);
+        //Check answer is not empty
+        Assert.assertNotNull(successRegistration.getId());
+        Assert.assertNotNull(successRegistration.getToken());
+        //Compare
+        Assert.assertEquals(id, successRegistration.getId());
+        Assert.assertEquals(token, successRegistration.getToken());
+    }
+
+    /**
+     * Unsuccessful registration - password not entered - in https://reqres.in/
+     */
+    @Test
+    public void unSuccessRegTest(){
+        Specifications.installSpecification(Specifications.requestSpec(URL), Specifications.responseError400());
+        Register user = new Register("sydney@fife", "");
+        UnsuccessRegistration unsuccessRegistration = given()
+                .body(user)
+                .post("api/register")
+                .then().log().all()
+                .extract().as(UnsuccessRegistration.class);
+        Assert.assertEquals("Missing password", unsuccessRegistration.getError());
+    }
+
 }
