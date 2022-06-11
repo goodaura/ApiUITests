@@ -3,8 +3,12 @@ Hi there. You can see my learning projects.
 I use Page Object pattern, so in main/java directory you can see pages and constants, in test derictory you can see tests and resources. 
 
       
-      
-# Appleinsider UI Tests
+# apiReqres
+Api tests for https://reqres.in/
+
+Api autotests using Pojo classes and Specification for the RestAssured library.
+
+# appleinsider
 UI tests for https://appleinsider.ru/ with Selenide.
 
 Tests:
@@ -12,7 +16,7 @@ Tests:
 - Button "Предыдущая" ("Previous") is not visible on main page;
 - Button "Предыдущая" ("Previous") is visible after click to button "Следующая" ("Next"). 
 
-# Demoqa UI Tests
+# demoqa
 UI tests for https://demoqa.com/ with Selenide.
 
 Tests: 
