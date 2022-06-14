@@ -1,12 +1,16 @@
-Hi there. You can see my learning projects. 
+Hi there. You can see my learning projects of test automation. 
 
-I use Page Object pattern, so in main/java directory you can see pages and constants, in test derictory you can see tests and resources. 
-
+# API tests
+For API tests I use Rest Assured library. 
       
 # apiReqres
 Api tests for https://reqres.in/
 
 Api autotests using Pojo classes and Specification for the RestAssured library.
+
+# UI tests
+I use Page Object pattern, so in main/java directory you can see pages and constants, in test derictory you can see tests and resources. To call latest chromedriver I use webdrivermanager dependency.
+
 
 # appleinsider
 UI tests for https://appleinsider.ru/ with Selenide.
